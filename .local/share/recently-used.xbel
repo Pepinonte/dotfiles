@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xbel version="1.0"
+      xmlns:bookmark="http://www.freedesktop.org/standards/desktop-bookmarks"
+      xmlns:mime="http://www.freedesktop.org/standards/shared-mime-info"
+>
+  <bookmark href="file:///home/headhtr/.screenlayout/xps" added="2022-10-21T18:31:33.638797Z" modified="2022-10-21T18:31:33.638815Z" visited="2022-10-21T18:31:33.638799Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/octet-stream"/>
+        <bookmark:applications>
+          <bookmark:application name="arandr" exec="&apos;arandr %u&apos;" modified="2022-10-21T18:31:33.638806Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/headhtr/T%C3%A9l%C3%A9chargements/FiraCode.zip" added="2022-10-21T18:42:30.148366Z" modified="2022-10-21T18:42:30.399066Z" visited="2022-10-21T18:42:30.148368Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/octet-stream"/>
+        <bookmark:applications>
+          <bookmark:application name="xdg-desktop-portal-gtk" exec="&apos;gio open %u&apos;" modified="2022-10-21T18:42:30.399056Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/headhtr/T%C3%A9l%C3%A9chargements/Hack.zip" added="2022-10-21T18:42:42.400967Z" modified="2022-10-21T18:42:42.651764Z" visited="2022-10-21T18:42:42.400968Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/octet-stream"/>
+        <bookmark:applications>
+          <bookmark:application name="xdg-desktop-portal-gtk" exec="&apos;gio open %u&apos;" modified="2022-10-21T18:42:42.651757Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/headhtr/T%C3%A9l%C3%A9chargements/UbuntuMono.zip" added="2022-10-21T18:42:55.007496Z" modified="2022-10-21T18:42:55.258383Z" visited="2022-10-21T18:42:55.007499Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/octet-stream"/>
+        <bookmark:applications>
+          <bookmark:application name="xdg-desktop-portal-gtk" exec="&apos;gio open %u&apos;" modified="2022-10-21T18:42:55.258371Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/headhtr/T%C3%A9l%C3%A9chargements/kora-1-5-3.zip" added="2022-10-21T19:11:31.711262Z" modified="2022-10-21T19:11:31.961697Z" visited="2022-10-21T19:11:31.711266Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/octet-stream"/>
+        <bookmark:applications>
+          <bookmark:application name="xdg-desktop-portal-gtk" exec="&apos;gio open %u&apos;" modified="2022-10-21T19:11:31.961690Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/headhtr/T%C3%A9l%C3%A9chargements/dotfiles-master.zip" added="2022-10-21T19:37:23.774338Z" modified="2022-10-21T19:37:23.774343Z" visited="2022-10-21T19:37:23.774339Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/zip"/>
+        <bookmark:applications>
+          <bookmark:application name="File Roller" exec="&apos;file-roller&apos;" modified="2022-10-21T19:37:23.774341Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+</xbel>

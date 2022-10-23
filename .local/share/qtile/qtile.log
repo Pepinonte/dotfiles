@@ -1,0 +1,643 @@
+2022-10-21 20:41:46,625 ERROR libqtile net.py:poll():L167 Net widget errored while polling:
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/libqtile/widget/net.py", line 140, in poll
+    down = new_stats[intf]["down"] - self.stats[intf]["down"]
+KeyError: 'wlo1'
+2022-10-21 20:41:46,670 WARNING libqtile base.py:on_done():L804 poll() returned None, not rescheduling
+2022-10-21 20:47:35,222 WARNING libqtile lifecycle.py:_atexit():L33 Restarting Qtile with os.execv(...)
+2022-10-21 20:47:35,900 ERROR libqtile net.py:poll():L167 Net widget errored while polling:
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/libqtile/widget/net.py", line 140, in poll
+    down = new_stats[intf]["down"] - self.stats[intf]["down"]
+KeyError: 'wlo1'
+2022-10-21 20:47:35,917 WARNING libqtile base.py:on_done():L804 poll() returned None, not rescheduling
+2022-10-21 20:47:55,976 ERROR libqtile manager.py:_finalize_configurables():L301 exception during finalize
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/libqtile/core/manager.py", line 289, in _finalize_configurables
+    widget.finalize()
+  File "/usr/lib/python3.10/site-packages/libqtile/widget/systray.py", line 289, in finalize
+    self.conn.conn.flush()
+  File "/usr/lib/python3.10/site-packages/xcffib/__init__.py", line 574, in wrapper
+    self.invalid()
+  File "/usr/lib/python3.10/site-packages/xcffib/__init__.py", line 560, in invalid
+    raise ConnectionException(err)
+xcffib.ConnectionException: xcb connection errors because of socket, pipe and other stream errors.
+2022-10-21 20:47:55,978 ERROR libqtile core.py:_xpoll():L332 Shutting down due to X connection error XCB_CONN_ERROR (1)
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/libqtile/backend/x11/core.py", line 294, in _xpoll
+    event = self.conn.conn.poll_for_event()
+  File "/usr/lib/python3.10/site-packages/xcffib/__init__.py", line 570, in wrapper
+    self.invalid()
+  File "/usr/lib/python3.10/site-packages/xcffib/__init__.py", line 560, in invalid
+    raise ConnectionException(err)
+xcffib.ConnectionException: xcb connection errors because of socket, pipe and other stream errors.
+2022-10-21 20:47:55,978 ERROR libqtile core.py:get_interesting_pid():L815 Got an exception in getting the window pid
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/libqtile/backend/x11/core.py", line 294, in _xpoll
+    event = self.conn.conn.poll_for_event()
+  File "/usr/lib/python3.10/site-packages/xcffib/__init__.py", line 570, in wrapper
+    self.invalid()
+  File "/usr/lib/python3.10/site-packages/xcffib/__init__.py", line 560, in invalid
+    raise ConnectionException(err)
+xcffib.ConnectionException: xcb connection errors because of socket, pipe and other stream errors.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/libqtile/backend/x11/core.py", line 813, in get_interesting_pid
+    return win.window.get_net_wm_pid()
+  File "/usr/lib/python3.10/site-packages/libqtile/backend/x11/window.py", line 293, in get_net_wm_pid
+    r = self.get_property("_NET_WM_PID", unpack=int)
+  File "/usr/lib/python3.10/site-packages/libqtile/backend/x11/window.py", line 374, in get_property
+    r = self.conn.conn.core.GetProperty(
+  File "/usr/lib/python3.10/site-packages/xcffib/xproto.py", line 2720, in GetProperty
+    return self.send_request(20, buf, GetPropertyCookie, is_checked=is_checked)
+  File "/usr/lib/python3.10/site-packages/xcffib/__init__.py", line 392, in send_request
+    seq = self.conn.send_request(flags, xcb_parts + 2, xcb_req)
+  File "/usr/lib/python3.10/site-packages/xcffib/__init__.py", line 570, in wrapper
+    self.invalid()
+  File "/usr/lib/python3.10/site-packages/xcffib/__init__.py", line 560, in invalid
+    raise ConnectionException(err)
+xcffib.ConnectionException: xcb connection errors because of socket, pipe and other stream errors.
+2022-10-21 20:47:55,980 ERROR libqtile core.py:get_interesting_pid():L815 Got an exception in getting the window pid
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/libqtile/backend/x11/core.py", line 294, in _xpoll
+    event = self.conn.conn.poll_for_event()
+  File "/usr/lib/python3.10/site-packages/xcffib/__init__.py", line 570, in wrapper
+    self.invalid()
+  File "/usr/lib/python3.10/site-packages/xcffib/__init__.py", line 560, in invalid
+    raise ConnectionException(err)
+xcffib.ConnectionException: xcb connection errors because of socket, pipe and other stream errors.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/libqtile/backend/x11/core.py", line 813, in get_interesting_pid
+    return win.window.get_net_wm_pid()
+  File "/usr/lib/python3.10/site-packages/libqtile/backend/x11/window.py", line 293, in get_net_wm_pid
+    r = self.get_property("_NET_WM_PID", unpack=int)
+  File "/usr/lib/python3.10/site-packages/libqtile/backend/x11/window.py", line 374, in get_property
+    r = self.conn.conn.core.GetProperty(
+  File "/usr/lib/python3.10/site-packages/xcffib/xproto.py", line 2720, in GetProperty
+    return self.send_request(20, buf, GetPropertyCookie, is_checked=is_checked)
+  File "/usr/lib/python3.10/site-packages/xcffib/__init__.py", line 392, in send_request
+    seq = self.conn.send_request(flags, xcb_parts + 2, xcb_req)
+  File "/usr/lib/python3.10/site-packages/xcffib/__init__.py", line 570, in wrapper
+    self.invalid()
+  File "/usr/lib/python3.10/site-packages/xcffib/__init__.py", line 560, in invalid
+    raise ConnectionException(err)
+xcffib.ConnectionException: xcb connection errors because of socket, pipe and other stream errors.
+2022-10-21 20:47:55,981 ERROR libqtile core.py:get_interesting_pid():L815 Got an exception in getting the window pid
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/libqtile/backend/x11/core.py", line 294, in _xpoll
+    event = self.conn.conn.poll_for_event()
+  File "/usr/lib/python3.10/site-packages/xcffib/__init__.py", line 570, in wrapper
+    self.invalid()
+  File "/usr/lib/python3.10/site-packages/xcffib/__init__.py", line 560, in invalid
+    raise ConnectionException(err)
+xcffib.ConnectionException: xcb connection errors because of socket, pipe and other stream errors.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/libqtile/backend/x11/core.py", line 813, in get_interesting_pid
+    return win.window.get_net_wm_pid()
+  File "/usr/lib/python3.10/site-packages/libqtile/backend/x11/window.py", line 293, in get_net_wm_pid
+    r = self.get_property("_NET_WM_PID", unpack=int)
+  File "/usr/lib/python3.10/site-packages/libqtile/backend/x11/window.py", line 374, in get_property
+    r = self.conn.conn.core.GetProperty(
+  File "/usr/lib/python3.10/site-packages/xcffib/xproto.py", line 2720, in GetProperty
+    return self.send_request(20, buf, GetPropertyCookie, is_checked=is_checked)
+  File "/usr/lib/python3.10/site-packages/xcffib/__init__.py", line 392, in send_request
+    seq = self.conn.send_request(flags, xcb_parts + 2, xcb_req)
+  File "/usr/lib/python3.10/site-packages/xcffib/__init__.py", line 570, in wrapper
+    self.invalid()
+  File "/usr/lib/python3.10/site-packages/xcffib/__init__.py", line 560, in invalid
+    raise ConnectionException(err)
+xcffib.ConnectionException: xcb connection errors because of socket, pipe and other stream errors.
+2022-10-21 20:47:55,981 ERROR libqtile core.py:get_interesting_pid():L815 Got an exception in getting the window pid
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/libqtile/backend/x11/core.py", line 813, in get_interesting_pid
+    return win.window.get_net_wm_pid()
+  File "/usr/lib/python3.10/site-packages/libqtile/backend/x11/window.py", line 293, in get_net_wm_pid
+    r = self.get_property("_NET_WM_PID", unpack=int)
+  File "/usr/lib/python3.10/site-packages/libqtile/backend/x11/window.py", line 374, in get_property
+    r = self.conn.conn.core.GetProperty(
+  File "/usr/lib/python3.10/site-packages/xcffib/xproto.py", line 2720, in GetProperty
+    return self.send_request(20, buf, GetPropertyCookie, is_checked=is_checked)
+  File "/usr/lib/python3.10/site-packages/xcffib/__init__.py", line 392, in send_request
+    seq = self.conn.send_request(flags, xcb_parts + 2, xcb_req)
+  File "/usr/lib/python3.10/site-packages/xcffib/__init__.py", line 570, in wrapper
+    self.invalid()
+  File "/usr/lib/python3.10/site-packages/xcffib/__init__.py", line 560, in invalid
+    raise ConnectionException(err)
+xcffib.ConnectionException: xcb connection errors because of socket, pipe and other stream errors.
+2022-10-21 20:47:55,981 ERROR libqtile core.py:get_interesting_pid():L815 Got an exception in getting the window pid
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/libqtile/backend/x11/core.py", line 813, in get_interesting_pid
+    return win.window.get_net_wm_pid()
+  File "/usr/lib/python3.10/site-packages/libqtile/backend/x11/window.py", line 293, in get_net_wm_pid
+    r = self.get_property("_NET_WM_PID", unpack=int)
+  File "/usr/lib/python3.10/site-packages/libqtile/backend/x11/window.py", line 374, in get_property
+    r = self.conn.conn.core.GetProperty(
+  File "/usr/lib/python3.10/site-packages/xcffib/xproto.py", line 2720, in GetProperty
+    return self.send_request(20, buf, GetPropertyCookie, is_checked=is_checked)
+  File "/usr/lib/python3.10/site-packages/xcffib/__init__.py", line 392, in send_request
+    seq = self.conn.send_request(flags, xcb_parts + 2, xcb_req)
+  File "/usr/lib/python3.10/site-packages/xcffib/__init__.py", line 570, in wrapper
+    self.invalid()
+  File "/usr/lib/python3.10/site-packages/xcffib/__init__.py", line 560, in invalid
+    raise ConnectionException(err)
+xcffib.ConnectionException: xcb connection errors because of socket, pipe and other stream errors.
+2022-10-21 20:47:55,982 ERROR libqtile core.py:get_interesting_pid():L815 Got an exception in getting the window pid
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/libqtile/backend/x11/core.py", line 813, in get_interesting_pid
+    return win.window.get_net_wm_pid()
+  File "/usr/lib/python3.10/site-packages/libqtile/backend/x11/window.py", line 293, in get_net_wm_pid
+    r = self.get_property("_NET_WM_PID", unpack=int)
+  File "/usr/lib/python3.10/site-packages/libqtile/backend/x11/window.py", line 374, in get_property
+    r = self.conn.conn.core.GetProperty(
+  File "/usr/lib/python3.10/site-packages/xcffib/xproto.py", line 2720, in GetProperty
+    return self.send_request(20, buf, GetPropertyCookie, is_checked=is_checked)
+  File "/usr/lib/python3.10/site-packages/xcffib/__init__.py", line 392, in send_request
+    seq = self.conn.send_request(flags, xcb_parts + 2, xcb_req)
+  File "/usr/lib/python3.10/site-packages/xcffib/__init__.py", line 570, in wrapper
+    self.invalid()
+  File "/usr/lib/python3.10/site-packages/xcffib/__init__.py", line 560, in invalid
+    raise ConnectionException(err)
+xcffib.ConnectionException: xcb connection errors because of socket, pipe and other stream errors.
+2022-10-21 20:47:55,984 ERROR libqtile start.py:start():L92 Qtile crashed
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/libqtile/scripts/start.py", line 90, in start
+    q.loop()
+  File "/usr/lib/python3.10/site-packages/libqtile/core/manager.py", line 198, in loop
+    asyncio.run(self.async_loop())
+  File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/usr/lib/python3.10/site-packages/libqtile/core/manager.py", line 226, in async_loop
+    self.finalize()
+  File "/usr/lib/python3.10/site-packages/libqtile/core/manager.py", line 306, in finalize
+    self.core.finalize()
+  File "/usr/lib/python3.10/site-packages/libqtile/backend/x11/core.py", line 170, in finalize
+    self.conn.conn.core.DeletePropertyChecked(
+  File "/usr/lib/python3.10/site-packages/xcffib/xproto.py", line 2716, in DeleteProperty
+    return self.send_request(19, buf, is_checked=is_checked)
+  File "/usr/lib/python3.10/site-packages/xcffib/__init__.py", line 392, in send_request
+    seq = self.conn.send_request(flags, xcb_parts + 2, xcb_req)
+  File "/usr/lib/python3.10/site-packages/xcffib/__init__.py", line 570, in wrapper
+    self.invalid()
+  File "/usr/lib/python3.10/site-packages/xcffib/__init__.py", line 560, in invalid
+    raise ConnectionException(err)
+xcffib.ConnectionException: xcb connection errors because of socket, pipe and other stream errors.
+2022-10-21 20:47:55,985 WARNING libqtile lifecycle.py:_atexit():L37 Qtile will now terminate
+2022-10-21 20:48:34,490 ERROR libqtile net.py:poll():L167 Net widget errored while polling:
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/libqtile/widget/net.py", line 140, in poll
+    down = new_stats[intf]["down"] - self.stats[intf]["down"]
+KeyError: 'wlo1'
+2022-10-21 20:48:34,515 WARNING libqtile base.py:on_done():L804 poll() returned None, not rescheduling
+2022-10-21 20:59:02,098 ERROR libqtile manager.py:process_button_click():L737 Mouse command error get_position: No object window in path 'window'
+2022-10-21 21:02:06,980 WARNING libqtile lifecycle.py:_atexit():L37 Qtile will now terminate
+2022-10-21 21:02:14,071 ERROR libqtile net.py:poll():L167 Net widget errored while polling:
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/libqtile/widget/net.py", line 140, in poll
+    down = new_stats[intf]["down"] - self.stats[intf]["down"]
+KeyError: 'wlo1'
+2022-10-21 21:02:14,082 WARNING libqtile base.py:on_done():L804 poll() returned None, not rescheduling
+2022-10-21 21:04:47,488 ERROR libqtile core.py:get_interesting_pid():L815 Got an exception in getting the window pid
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/xcffib/__init__.py", line 572, in wrapper
+    return f(*args)
+  File "/usr/lib/python3.10/site-packages/xcffib/__init__.py", line 659, in wait_for_reply
+    self._process_error(error_p[0])
+  File "/usr/lib/python3.10/site-packages/xcffib/__init__.py", line 646, in _process_error
+    self.invalid()
+  File "/usr/lib/python3.10/site-packages/xcffib/__init__.py", line 560, in invalid
+    raise ConnectionException(err)
+xcffib.ConnectionException: xcb connection errors because of socket, pipe and other stream errors.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/libqtile/backend/x11/core.py", line 813, in get_interesting_pid
+    return win.window.get_net_wm_pid()
+  File "/usr/lib/python3.10/site-packages/libqtile/backend/x11/window.py", line 293, in get_net_wm_pid
+    r = self.get_property("_NET_WM_PID", unpack=int)
+  File "/usr/lib/python3.10/site-packages/libqtile/backend/x11/window.py", line 381, in get_property
+    ).reply()
+  File "/usr/lib/python3.10/site-packages/xcffib/__init__.py", line 333, in reply
+    data = self.conn.wait_for_reply(self.sequence)
+  File "/usr/lib/python3.10/site-packages/xcffib/__init__.py", line 574, in wrapper
+    self.invalid()
+  File "/usr/lib/python3.10/site-packages/xcffib/__init__.py", line 560, in invalid
+    raise ConnectionException(err)
+xcffib.ConnectionException: xcb connection errors because of socket, pipe and other stream errors.
+2022-10-21 21:04:47,490 ERROR libqtile core.py:get_interesting_pid():L815 Got an exception in getting the window pid
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/libqtile/backend/x11/core.py", line 813, in get_interesting_pid
+    return win.window.get_net_wm_pid()
+  File "/usr/lib/python3.10/site-packages/libqtile/backend/x11/window.py", line 293, in get_net_wm_pid
+    r = self.get_property("_NET_WM_PID", unpack=int)
+  File "/usr/lib/python3.10/site-packages/libqtile/backend/x11/window.py", line 374, in get_property
+    r = self.conn.conn.core.GetProperty(
+  File "/usr/lib/python3.10/site-packages/xcffib/xproto.py", line 2720, in GetProperty
+    return self.send_request(20, buf, GetPropertyCookie, is_checked=is_checked)
+  File "/usr/lib/python3.10/site-packages/xcffib/__init__.py", line 392, in send_request
+    seq = self.conn.send_request(flags, xcb_parts + 2, xcb_req)
+  File "/usr/lib/python3.10/site-packages/xcffib/__init__.py", line 570, in wrapper
+    self.invalid()
+  File "/usr/lib/python3.10/site-packages/xcffib/__init__.py", line 560, in invalid
+    raise ConnectionException(err)
+xcffib.ConnectionException: xcb connection errors because of socket, pipe and other stream errors.
+2022-10-21 21:04:47,492 ERROR libqtile manager.py:_finalize_configurables():L301 exception during finalize
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/libqtile/core/manager.py", line 289, in _finalize_configurables
+    widget.finalize()
+  File "/usr/lib/python3.10/site-packages/libqtile/widget/base.py", line 246, in finalize
+    self.drawer.finalize()
+  File "/usr/lib/python3.10/site-packages/libqtile/backend/x11/drawer.py", line 35, in finalize
+    self._free_pixmap()
+  File "/usr/lib/python3.10/site-packages/libqtile/backend/x11/drawer.py", line 115, in _free_pixmap
+    self.qtile.core.conn.conn.core.FreePixmap(self._pixmap)
+  File "/usr/lib/python3.10/site-packages/xcffib/xproto.py", line 2863, in FreePixmap
+    return self.send_request(54, buf, is_checked=is_checked)
+  File "/usr/lib/python3.10/site-packages/xcffib/__init__.py", line 392, in send_request
+    seq = self.conn.send_request(flags, xcb_parts + 2, xcb_req)
+  File "/usr/lib/python3.10/site-packages/xcffib/__init__.py", line 570, in wrapper
+    self.invalid()
+  File "/usr/lib/python3.10/site-packages/xcffib/__init__.py", line 560, in invalid
+    raise ConnectionException(err)
+xcffib.ConnectionException: xcb connection errors because of socket, pipe and other stream errors.
+2022-10-21 21:04:47,494 ERROR libqtile core.py:_xpoll():L332 Shutting down due to X connection error XCB_CONN_ERROR (1)
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/libqtile/backend/x11/core.py", line 294, in _xpoll
+    event = self.conn.conn.poll_for_event()
+  File "/usr/lib/python3.10/site-packages/xcffib/__init__.py", line 570, in wrapper
+    self.invalid()
+  File "/usr/lib/python3.10/site-packages/xcffib/__init__.py", line 560, in invalid
+    raise ConnectionException(err)
+xcffib.ConnectionException: xcb connection errors because of socket, pipe and other stream errors.
+2022-10-21 21:04:47,494 ERROR libqtile core.py:get_interesting_pid():L815 Got an exception in getting the window pid
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/libqtile/backend/x11/core.py", line 294, in _xpoll
+    event = self.conn.conn.poll_for_event()
+  File "/usr/lib/python3.10/site-packages/xcffib/__init__.py", line 570, in wrapper
+    self.invalid()
+  File "/usr/lib/python3.10/site-packages/xcffib/__init__.py", line 560, in invalid
+    raise ConnectionException(err)
+xcffib.ConnectionException: xcb connection errors because of socket, pipe and other stream errors.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/libqtile/backend/x11/core.py", line 813, in get_interesting_pid
+    return win.window.get_net_wm_pid()
+  File "/usr/lib/python3.10/site-packages/libqtile/backend/x11/window.py", line 293, in get_net_wm_pid
+    r = self.get_property("_NET_WM_PID", unpack=int)
+  File "/usr/lib/python3.10/site-packages/libqtile/backend/x11/window.py", line 374, in get_property
+    r = self.conn.conn.core.GetProperty(
+  File "/usr/lib/python3.10/site-packages/xcffib/xproto.py", line 2720, in GetProperty
+    return self.send_request(20, buf, GetPropertyCookie, is_checked=is_checked)
+  File "/usr/lib/python3.10/site-packages/xcffib/__init__.py", line 392, in send_request
+    seq = self.conn.send_request(flags, xcb_parts + 2, xcb_req)
+  File "/usr/lib/python3.10/site-packages/xcffib/__init__.py", line 570, in wrapper
+    self.invalid()
+  File "/usr/lib/python3.10/site-packages/xcffib/__init__.py", line 560, in invalid
+    raise ConnectionException(err)
+xcffib.ConnectionException: xcb connection errors because of socket, pipe and other stream errors.
+2022-10-21 21:04:47,495 ERROR libqtile core.py:get_interesting_pid():L815 Got an exception in getting the window pid
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/libqtile/backend/x11/core.py", line 294, in _xpoll
+    event = self.conn.conn.poll_for_event()
+  File "/usr/lib/python3.10/site-packages/xcffib/__init__.py", line 570, in wrapper
+    self.invalid()
+  File "/usr/lib/python3.10/site-packages/xcffib/__init__.py", line 560, in invalid
+    raise ConnectionException(err)
+xcffib.ConnectionException: xcb connection errors because of socket, pipe and other stream errors.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/libqtile/backend/x11/core.py", line 813, in get_interesting_pid
+    return win.window.get_net_wm_pid()
+  File "/usr/lib/python3.10/site-packages/libqtile/backend/x11/window.py", line 293, in get_net_wm_pid
+    r = self.get_property("_NET_WM_PID", unpack=int)
+  File "/usr/lib/python3.10/site-packages/libqtile/backend/x11/window.py", line 374, in get_property
+    r = self.conn.conn.core.GetProperty(
+  File "/usr/lib/python3.10/site-packages/xcffib/xproto.py", line 2720, in GetProperty
+    return self.send_request(20, buf, GetPropertyCookie, is_checked=is_checked)
+  File "/usr/lib/python3.10/site-packages/xcffib/__init__.py", line 392, in send_request
+    seq = self.conn.send_request(flags, xcb_parts + 2, xcb_req)
+  File "/usr/lib/python3.10/site-packages/xcffib/__init__.py", line 570, in wrapper
+    self.invalid()
+  File "/usr/lib/python3.10/site-packages/xcffib/__init__.py", line 560, in invalid
+    raise ConnectionException(err)
+xcffib.ConnectionException: xcb connection errors because of socket, pipe and other stream errors.
+2022-10-21 21:04:47,495 ERROR libqtile core.py:get_interesting_pid():L815 Got an exception in getting the window pid
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/libqtile/backend/x11/core.py", line 813, in get_interesting_pid
+    return win.window.get_net_wm_pid()
+  File "/usr/lib/python3.10/site-packages/libqtile/backend/x11/window.py", line 293, in get_net_wm_pid
+    r = self.get_property("_NET_WM_PID", unpack=int)
+  File "/usr/lib/python3.10/site-packages/libqtile/backend/x11/window.py", line 374, in get_property
+    r = self.conn.conn.core.GetProperty(
+  File "/usr/lib/python3.10/site-packages/xcffib/xproto.py", line 2720, in GetProperty
+    return self.send_request(20, buf, GetPropertyCookie, is_checked=is_checked)
+  File "/usr/lib/python3.10/site-packages/xcffib/__init__.py", line 392, in send_request
+    seq = self.conn.send_request(flags, xcb_parts + 2, xcb_req)
+  File "/usr/lib/python3.10/site-packages/xcffib/__init__.py", line 570, in wrapper
+    self.invalid()
+  File "/usr/lib/python3.10/site-packages/xcffib/__init__.py", line 560, in invalid
+    raise ConnectionException(err)
+xcffib.ConnectionException: xcb connection errors because of socket, pipe and other stream errors.
+2022-10-21 21:04:47,496 ERROR libqtile core.py:get_interesting_pid():L815 Got an exception in getting the window pid
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/libqtile/backend/x11/core.py", line 813, in get_interesting_pid
+    return win.window.get_net_wm_pid()
+  File "/usr/lib/python3.10/site-packages/libqtile/backend/x11/window.py", line 293, in get_net_wm_pid
+    r = self.get_property("_NET_WM_PID", unpack=int)
+  File "/usr/lib/python3.10/site-packages/libqtile/backend/x11/window.py", line 374, in get_property
+    r = self.conn.conn.core.GetProperty(
+  File "/usr/lib/python3.10/site-packages/xcffib/xproto.py", line 2720, in GetProperty
+    return self.send_request(20, buf, GetPropertyCookie, is_checked=is_checked)
+  File "/usr/lib/python3.10/site-packages/xcffib/__init__.py", line 392, in send_request
+    seq = self.conn.send_request(flags, xcb_parts + 2, xcb_req)
+  File "/usr/lib/python3.10/site-packages/xcffib/__init__.py", line 570, in wrapper
+    self.invalid()
+  File "/usr/lib/python3.10/site-packages/xcffib/__init__.py", line 560, in invalid
+    raise ConnectionException(err)
+xcffib.ConnectionException: xcb connection errors because of socket, pipe and other stream errors.
+2022-10-21 21:04:47,502 ERROR libqtile start.py:start():L92 Qtile crashed
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/libqtile/scripts/start.py", line 90, in start
+    q.loop()
+  File "/usr/lib/python3.10/site-packages/libqtile/core/manager.py", line 198, in loop
+    asyncio.run(self.async_loop())
+  File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/usr/lib/python3.10/site-packages/libqtile/core/manager.py", line 226, in async_loop
+    self.finalize()
+  File "/usr/lib/python3.10/site-packages/libqtile/core/manager.py", line 306, in finalize
+    self.core.finalize()
+  File "/usr/lib/python3.10/site-packages/libqtile/backend/x11/core.py", line 170, in finalize
+    self.conn.conn.core.DeletePropertyChecked(
+  File "/usr/lib/python3.10/site-packages/xcffib/xproto.py", line 2716, in DeleteProperty
+    return self.send_request(19, buf, is_checked=is_checked)
+  File "/usr/lib/python3.10/site-packages/xcffib/__init__.py", line 392, in send_request
+    seq = self.conn.send_request(flags, xcb_parts + 2, xcb_req)
+  File "/usr/lib/python3.10/site-packages/xcffib/__init__.py", line 570, in wrapper
+    self.invalid()
+  File "/usr/lib/python3.10/site-packages/xcffib/__init__.py", line 560, in invalid
+    raise ConnectionException(err)
+xcffib.ConnectionException: xcb connection errors because of socket, pipe and other stream errors.
+2022-10-21 21:04:47,504 WARNING libqtile lifecycle.py:_atexit():L37 Qtile will now terminate
+2022-10-21 21:06:33,071 ERROR libqtile net.py:poll():L167 Net widget errored while polling:
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/libqtile/widget/net.py", line 140, in poll
+    down = new_stats[intf]["down"] - self.stats[intf]["down"]
+KeyError: 'wlo1'
+2022-10-21 21:06:33,104 WARNING libqtile base.py:on_done():L804 poll() returned None, not rescheduling
+2022-10-21 21:15:00,768 WARNING libqtile lifecycle.py:_atexit():L33 Restarting Qtile with os.execv(...)
+2022-10-21 21:15:01,514 ERROR libqtile net.py:poll():L167 Net widget errored while polling:
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/libqtile/widget/net.py", line 140, in poll
+    down = new_stats[intf]["down"] - self.stats[intf]["down"]
+KeyError: 'wlo1'
+2022-10-21 21:15:01,531 WARNING libqtile base.py:on_done():L804 poll() returned None, not rescheduling
+2022-10-21 21:15:16,292 WARNING libqtile lifecycle.py:_atexit():L33 Restarting Qtile with os.execv(...)
+2022-10-21 21:15:17,052 ERROR libqtile net.py:poll():L167 Net widget errored while polling:
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/libqtile/widget/net.py", line 140, in poll
+    down = new_stats[intf]["down"] - self.stats[intf]["down"]
+KeyError: 'wlo1'
+2022-10-21 21:15:17,069 WARNING libqtile base.py:on_done():L804 poll() returned None, not rescheduling
+2022-10-21 21:15:31,073 WARNING libqtile lifecycle.py:_atexit():L33 Restarting Qtile with os.execv(...)
+2022-10-21 21:15:31,852 ERROR libqtile net.py:poll():L167 Net widget errored while polling:
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/libqtile/widget/net.py", line 140, in poll
+    down = new_stats[intf]["down"] - self.stats[intf]["down"]
+KeyError: 'wlo1'
+2022-10-21 21:15:31,877 WARNING libqtile base.py:on_done():L804 poll() returned None, not rescheduling
+2022-10-21 21:15:48,309 WARNING libqtile lifecycle.py:_atexit():L33 Restarting Qtile with os.execv(...)
+2022-10-21 21:15:49,089 ERROR libqtile net.py:poll():L167 Net widget errored while polling:
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/libqtile/widget/net.py", line 140, in poll
+    down = new_stats[intf]["down"] - self.stats[intf]["down"]
+KeyError: 'wlo1'
+2022-10-21 21:15:49,109 WARNING libqtile base.py:on_done():L804 poll() returned None, not rescheduling
+2022-10-21 21:17:14,549 WARNING libqtile lifecycle.py:_atexit():L33 Restarting Qtile with os.execv(...)
+2022-10-21 21:49:44,707 WARNING libqtile lifecycle.py:_atexit():L33 Restarting Qtile with os.execv(...)
+2022-10-21 21:57:08,373 WARNING libqtile lifecycle.py:_atexit():L33 Restarting Qtile with os.execv(...)
+2022-10-22 01:52:41,403 ERROR libqtile net.py:poll():L167 Net widget errored while polling:
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/libqtile/widget/net.py", line 140, in poll
+    down = new_stats[intf]["down"] - self.stats[intf]["down"]
+KeyError: 'wlp58s0'
+2022-10-22 01:52:41,438 WARNING libqtile base.py:on_done():L804 poll() returned None, not rescheduling
+2022-10-22 03:45:34,430 WARNING libqtile lifecycle.py:_atexit():L33 Restarting Qtile with os.execv(...)
+2022-10-22 03:48:24,966 WARNING libqtile lifecycle.py:_atexit():L33 Restarting Qtile with os.execv(...)
+2022-10-22 03:49:08,933 WARNING libqtile lifecycle.py:_atexit():L33 Restarting Qtile with os.execv(...)
+2022-10-22 04:48:19,670 WARNING libqtile lifecycle.py:_atexit():L33 Restarting Qtile with os.execv(...)
+2022-10-22 04:48:23,764 WARNING libqtile lifecycle.py:_atexit():L37 Qtile will now terminate
+2022-10-22 04:49:08,572 ERROR libqtile loop.py:_handle_exception():L63 xcb connection errors because of socket, pipe and other stream errors.
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/xcffib/__init__.py", line 572, in wrapper
+    return f(*args)
+  File "/usr/lib/python3.10/site-packages/xcffib/__init__.py", line 682, in request_check
+    self._process_error(err)
+  File "/usr/lib/python3.10/site-packages/xcffib/__init__.py", line 646, in _process_error
+    self.invalid()
+  File "/usr/lib/python3.10/site-packages/xcffib/__init__.py", line 560, in invalid
+    raise ConnectionException(err)
+xcffib.ConnectionException: xcb connection errors because of socket, pipe and other stream errors.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/usr/lib/python3.10/site-packages/libqtile/core/manager.py", line 862, in f
+    func(*args)
+  File "/usr/lib/python3.10/site-packages/libqtile/bar.py", line 616, in _actual_draw
+    i.draw()
+  File "/usr/lib/python3.10/site-packages/libqtile/widget/systray.py", line 258, in draw
+    icon.place(xoffset, yoffset, icon.width, self.icon_size, 0, None)
+  File "/usr/lib/python3.10/site-packages/libqtile/backend/x11/window.py", line 906, in place
+    self.paint_borders(bordercolor, borderwidth)
+  File "/usr/lib/python3.10/site-packages/libqtile/backend/x11/window.py", line 915, in paint_borders
+    self.window.paint_borders(self.depth, color, width, self.width, self.height)
+  File "/usr/lib/python3.10/site-packages/libqtile/backend/x11/window.py", line 428, in paint_borders
+    self.set_property("_NET_FRAME_EXTENTS", [borderwidth] * 4)
+  File "/usr/lib/python3.10/site-packages/libqtile/backend/x11/window.py", line 357, in set_property
+    ).check()
+  File "/usr/lib/python3.10/site-packages/xcffib/__init__.py", line 340, in check
+    self.conn.request_check(self.sequence)
+  File "/usr/lib/python3.10/site-packages/xcffib/__init__.py", line 574, in wrapper
+    self.invalid()
+  File "/usr/lib/python3.10/site-packages/xcffib/__init__.py", line 560, in invalid
+    raise ConnectionException(err)
+xcffib.ConnectionException: xcb connection errors because of socket, pipe and other stream errors.
+2022-10-22 04:49:08,592 ERROR libqtile core.py:_xpoll():L332 Shutting down due to X connection error XCB_CONN_ERROR (1)
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/libqtile/backend/x11/core.py", line 294, in _xpoll
+    event = self.conn.conn.poll_for_event()
+  File "/usr/lib/python3.10/site-packages/xcffib/__init__.py", line 570, in wrapper
+    self.invalid()
+  File "/usr/lib/python3.10/site-packages/xcffib/__init__.py", line 560, in invalid
+    raise ConnectionException(err)
+xcffib.ConnectionException: xcb connection errors because of socket, pipe and other stream errors.
+2022-10-22 04:49:08,595 ERROR libqtile core.py:get_interesting_pid():L815 Got an exception in getting the window pid
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/libqtile/backend/x11/core.py", line 294, in _xpoll
+    event = self.conn.conn.poll_for_event()
+  File "/usr/lib/python3.10/site-packages/xcffib/__init__.py", line 570, in wrapper
+    self.invalid()
+  File "/usr/lib/python3.10/site-packages/xcffib/__init__.py", line 560, in invalid
+    raise ConnectionException(err)
+xcffib.ConnectionException: xcb connection errors because of socket, pipe and other stream errors.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/libqtile/backend/x11/core.py", line 813, in get_interesting_pid
+    return win.window.get_net_wm_pid()
+  File "/usr/lib/python3.10/site-packages/libqtile/backend/x11/window.py", line 293, in get_net_wm_pid
+    r = self.get_property("_NET_WM_PID", unpack=int)
+  File "/usr/lib/python3.10/site-packages/libqtile/backend/x11/window.py", line 374, in get_property
+    r = self.conn.conn.core.GetProperty(
+  File "/usr/lib/python3.10/site-packages/xcffib/xproto.py", line 2720, in GetProperty
+    return self.send_request(20, buf, GetPropertyCookie, is_checked=is_checked)
+  File "/usr/lib/python3.10/site-packages/xcffib/__init__.py", line 392, in send_request
+    seq = self.conn.send_request(flags, xcb_parts + 2, xcb_req)
+  File "/usr/lib/python3.10/site-packages/xcffib/__init__.py", line 570, in wrapper
+    self.invalid()
+  File "/usr/lib/python3.10/site-packages/xcffib/__init__.py", line 560, in invalid
+    raise ConnectionException(err)
+xcffib.ConnectionException: xcb connection errors because of socket, pipe and other stream errors.
+2022-10-22 04:49:08,602 ERROR libqtile loop.py:_handle_exception():L63 xcb connection errors because of socket, pipe and other stream errors.
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/usr/lib/python3.10/site-packages/libqtile/core/manager.py", line 881, in f
+    self.core.flush()
+  File "/usr/lib/python3.10/site-packages/libqtile/backend/x11/core.py", line 802, in flush
+    self.conn.flush()
+  File "/usr/lib/python3.10/site-packages/libqtile/backend/x11/xcbq.py", line 638, in flush
+    return self.conn.flush()
+  File "/usr/lib/python3.10/site-packages/xcffib/__init__.py", line 570, in wrapper
+    self.invalid()
+  File "/usr/lib/python3.10/site-packages/xcffib/__init__.py", line 560, in invalid
+    raise ConnectionException(err)
+xcffib.ConnectionException: xcb connection errors because of socket, pipe and other stream errors.
+2022-10-22 04:49:08,611 ERROR libqtile core.py:get_interesting_pid():L815 Got an exception in getting the window pid
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/libqtile/backend/x11/core.py", line 813, in get_interesting_pid
+    return win.window.get_net_wm_pid()
+  File "/usr/lib/python3.10/site-packages/libqtile/backend/x11/window.py", line 293, in get_net_wm_pid
+    r = self.get_property("_NET_WM_PID", unpack=int)
+  File "/usr/lib/python3.10/site-packages/libqtile/backend/x11/window.py", line 374, in get_property
+    r = self.conn.conn.core.GetProperty(
+  File "/usr/lib/python3.10/site-packages/xcffib/xproto.py", line 2720, in GetProperty
+    return self.send_request(20, buf, GetPropertyCookie, is_checked=is_checked)
+  File "/usr/lib/python3.10/site-packages/xcffib/__init__.py", line 392, in send_request
+    seq = self.conn.send_request(flags, xcb_parts + 2, xcb_req)
+  File "/usr/lib/python3.10/site-packages/xcffib/__init__.py", line 570, in wrapper
+    self.invalid()
+  File "/usr/lib/python3.10/site-packages/xcffib/__init__.py", line 560, in invalid
+    raise ConnectionException(err)
+xcffib.ConnectionException: xcb connection errors because of socket, pipe and other stream errors.
+2022-10-22 04:49:08,612 ERROR libqtile core.py:get_interesting_pid():L815 Got an exception in getting the window pid
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/libqtile/backend/x11/core.py", line 813, in get_interesting_pid
+    return win.window.get_net_wm_pid()
+  File "/usr/lib/python3.10/site-packages/libqtile/backend/x11/window.py", line 293, in get_net_wm_pid
+    r = self.get_property("_NET_WM_PID", unpack=int)
+  File "/usr/lib/python3.10/site-packages/libqtile/backend/x11/window.py", line 374, in get_property
+    r = self.conn.conn.core.GetProperty(
+  File "/usr/lib/python3.10/site-packages/xcffib/xproto.py", line 2720, in GetProperty
+    return self.send_request(20, buf, GetPropertyCookie, is_checked=is_checked)
+  File "/usr/lib/python3.10/site-packages/xcffib/__init__.py", line 392, in send_request
+    seq = self.conn.send_request(flags, xcb_parts + 2, xcb_req)
+  File "/usr/lib/python3.10/site-packages/xcffib/__init__.py", line 570, in wrapper
+    self.invalid()
+  File "/usr/lib/python3.10/site-packages/xcffib/__init__.py", line 560, in invalid
+    raise ConnectionException(err)
+xcffib.ConnectionException: xcb connection errors because of socket, pipe and other stream errors.
+2022-10-22 04:49:08,619 ERROR libqtile manager.py:_finalize_configurables():L301 exception during finalize
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/libqtile/core/manager.py", line 289, in _finalize_configurables
+    widget.finalize()
+  File "/usr/lib/python3.10/site-packages/libqtile/widget/base.py", line 246, in finalize
+    self.drawer.finalize()
+  File "/usr/lib/python3.10/site-packages/libqtile/backend/x11/drawer.py", line 35, in finalize
+    self._free_pixmap()
+  File "/usr/lib/python3.10/site-packages/libqtile/backend/x11/drawer.py", line 115, in _free_pixmap
+    self.qtile.core.conn.conn.core.FreePixmap(self._pixmap)
+  File "/usr/lib/python3.10/site-packages/xcffib/xproto.py", line 2863, in FreePixmap
+    return self.send_request(54, buf, is_checked=is_checked)
+  File "/usr/lib/python3.10/site-packages/xcffib/__init__.py", line 392, in send_request
+    seq = self.conn.send_request(flags, xcb_parts + 2, xcb_req)
+  File "/usr/lib/python3.10/site-packages/xcffib/__init__.py", line 570, in wrapper
+    self.invalid()
+  File "/usr/lib/python3.10/site-packages/xcffib/__init__.py", line 560, in invalid
+    raise ConnectionException(err)
+xcffib.ConnectionException: xcb connection errors because of socket, pipe and other stream errors.
+2022-10-22 04:49:08,633 ERROR libqtile start.py:start():L92 Qtile crashed
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/libqtile/scripts/start.py", line 90, in start
+    q.loop()
+  File "/usr/lib/python3.10/site-packages/libqtile/core/manager.py", line 198, in loop
+    asyncio.run(self.async_loop())
+  File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/usr/lib/python3.10/site-packages/libqtile/core/manager.py", line 226, in async_loop
+    self.finalize()
+  File "/usr/lib/python3.10/site-packages/libqtile/core/manager.py", line 306, in finalize
+    self.core.finalize()
+  File "/usr/lib/python3.10/site-packages/libqtile/backend/x11/core.py", line 170, in finalize
+    self.conn.conn.core.DeletePropertyChecked(
+  File "/usr/lib/python3.10/site-packages/xcffib/xproto.py", line 2716, in DeleteProperty
+    return self.send_request(19, buf, is_checked=is_checked)
+  File "/usr/lib/python3.10/site-packages/xcffib/__init__.py", line 392, in send_request
+    seq = self.conn.send_request(flags, xcb_parts + 2, xcb_req)
+  File "/usr/lib/python3.10/site-packages/xcffib/__init__.py", line 570, in wrapper
+    self.invalid()
+  File "/usr/lib/python3.10/site-packages/xcffib/__init__.py", line 560, in invalid
+    raise ConnectionException(err)
+xcffib.ConnectionException: xcb connection errors because of socket, pipe and other stream errors.
+2022-10-22 04:49:08,638 WARNING libqtile lifecycle.py:_atexit():L37 Qtile will now terminate
+2022-10-22 13:13:06,244 ERROR libqtile net.py:poll():L167 Net widget errored while polling:
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/libqtile/widget/net.py", line 140, in poll
+    down = new_stats[intf]["down"] - self.stats[intf]["down"]
+KeyError: 'wlp58s0'
+2022-10-22 13:13:06,266 WARNING libqtile base.py:on_done():L804 poll() returned None, not rescheduling
+2022-10-22 13:16:43,796 WARNING libqtile lifecycle.py:_atexit():L33 Restarting Qtile with os.execv(...)
+2022-10-22 13:16:58,055 WARNING libqtile lifecycle.py:_atexit():L37 Qtile will now terminate
+2022-10-22 21:42:22,312 ERROR libqtile net.py:poll():L167 Net widget errored while polling:
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/libqtile/widget/net.py", line 140, in poll
+    down = new_stats[intf]["down"] - self.stats[intf]["down"]
+KeyError: 'wlp58s0'
+2022-10-22 21:42:22,369 WARNING libqtile base.py:on_done():L804 poll() returned None, not rescheduling
+2022-10-22 21:44:54,965 WARNING libqtile lifecycle.py:_atexit():L33 Restarting Qtile with os.execv(...)
+2022-10-22 21:55:43,237 WARNING libqtile lifecycle.py:_atexit():L33 Restarting Qtile with os.execv(...)
+2022-10-22 21:56:05,192 WARNING libqtile lifecycle.py:_atexit():L33 Restarting Qtile with os.execv(...)
+2022-10-23 01:55:26,248 ERROR libqtile net.py:poll():L167 Net widget errored while polling:
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/libqtile/widget/net.py", line 140, in poll
+    down = new_stats[intf]["down"] - self.stats[intf]["down"]
+KeyError: 'wlp58s0'
+2022-10-23 01:55:26,287 WARNING libqtile base.py:on_done():L804 poll() returned None, not rescheduling
+2022-10-23 02:15:35,357 WARNING libqtile lifecycle.py:_atexit():L33 Restarting Qtile with os.execv(...)
+2022-10-23 03:08:42,109 WARNING libqtile lifecycle.py:_atexit():L33 Restarting Qtile with os.execv(...)
+2022-10-23 03:29:19,722 ERROR libqtile manager.py:cmd_spawn():L1160 couldn't find `redshift`
+2022-10-23 03:29:21,560 ERROR libqtile manager.py:cmd_spawn():L1160 couldn't find `redshift`
+2022-10-23 03:36:28,206 WARNING libqtile lifecycle.py:_atexit():L33 Restarting Qtile with os.execv(...)
+2022-10-23 05:05:31,599 ERROR libqtile manager.py:cmd_spawn():L1160 couldn't find `redshift`

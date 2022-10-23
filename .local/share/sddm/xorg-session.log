@@ -1,0 +1,55 @@
+[ 22/10/2022 13:17:04.799 parse_config_libconfig WARN ] The refresh-rate option has been deprecated. Please remove it from your configuration file. If you encounter any problems without this feature, please feel free to open a bug report
+
+** (xfce4-clipman:2269): WARNING **: 13:17:05.970: Unable to register GApplication: Un objet est déjà exporté pour l’interface « org.gtk.Application » en « /org/xfce/clipman »
+
+(xfce4-clipman:2269): GLib-GIO-CRITICAL **: 13:17:05.971: g_application_get_is_remote: assertion 'application->priv->is_registered' failed
+
+(xfce4-clipman:2269): GLib-WARNING **: 13:17:05.971: g_set_application_name() called multiple times
+
+** (xfce4-power-manager:2268): WARNING **: 13:17:06.000: Failed to get name owner: GDBus.Error:org.freedesktop.DBus.Error.NameHasNoOwner: Could not get owner of name 'org.freedesktop.PowerManagement': no such name
+
+
+** (xfce4-power-manager:2268): WARNING **: 13:17:06.003: Failed to get name owner: GDBus.Error:org.freedesktop.DBus.Error.NameHasNoOwner: Could not get owner of name 'org.xfce.PowerManager': no such name
+
+
+(xfce4-power-manager:2268): xfce4-power-manager-WARNING **: 13:17:06.004: Unable to connect to session manager : Impossible de se connecter au gestionnaire de session : SESSION_MANAGER environment variable not defined
+
+(xfce4-power-manager:2268): GLib-GObject-WARNING **: 13:17:06.056: ../glib/gobject/gsignal.c:2620: signal 'Changed' is invalid for instance '0x564fa06a28b0' of type 'GDBusProxy'
+
+(xfce4-power-manager:2268): xfce4-power-manager-WARNING **: 13:17:06.257: could not map keysym 1008ffa8 to keycode
+
+
+** (xfce4-power-manager:2268): WARNING **: 13:17:06.669: No outputs have backlight property
+
+(xfce4-power-manager:2268): xfce4-power-manager-WARNING **: 13:17:06.687: It seems the kernel brightness switch handling value was not restored properly on exit last time, xfce4-power-manager will try to restore it this time.
+xfce4-power-manager-Message: 13:17:06.772: Set kernel brightness switch to 0
+File does not exist: /home/headhtr/.config/autostart/arcolinux-welcome-app.desktop
+
+** (volumeicon:2265): WARNING **: 13:17:07.335: Binding 'AudioRaiseVolume' failed!
+Failed to bind AudioRaiseVolume
+
+** (volumeicon:2265): WARNING **: 13:17:07.336: Binding 'AudioLowerVolume' failed!
+Failed to bind AudioLowerVolume
+
+** (volumeicon:2265): WARNING **: 13:17:07.336: Binding 'AudioMute' failed!
+Failed to bind AudioMute
+
+(xfce4-clipman:2269): Gtk-CRITICAL **: 13:17:37.307: _gtk_widget_captured_event: assertion 'WIDGET_REALIZED_FOR_EVENT (widget, event)' failed
+
+(xfce4-clipman:2269): Gtk-CRITICAL **: 13:17:37.307: _gtk_widget_captured_event: assertion 'WIDGET_REALIZED_FOR_EVENT (widget, event)' failed
+
+(xfce4-clipman:2269): GLib-CRITICAL **: 13:23:44.669: Source ID 105 was not found when attempting to remove it
+
+** (xfce4-power-manager:2268): WARNING **: 13:40:27.626: No outputs have backlight property
+
+** (xfce4-power-manager:2268): WARNING **: 21:56:30.750: No outputs have backlight property
+
+(xfce4-clipman:2269): GLib-CRITICAL **: 03:05:51.411: Source ID 343 was not found when attempting to remove it
+
+(xfce4-clipman:2269): GLib-CRITICAL **: 03:07:34.244: Source ID 347 was not found when attempting to remove it
+
+(xfce4-clipman:2269): GLib-CRITICAL **: 03:14:39.077: Source ID 440 was not found when attempting to remove it
+
+(xfce4-clipman:2269): GLib-CRITICAL **: 03:15:38.048: Source ID 459 was not found when attempting to remove it
+
+(xfce4-clipman:2269): GLib-CRITICAL **: 03:15:50.648: Source ID 462 was not found when attempting to remove it

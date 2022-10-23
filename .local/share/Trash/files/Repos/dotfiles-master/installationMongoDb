@@ -1,0 +1,5 @@
+yay -S mongodb-bin
+yay -S mongo-tools-bin
+
+/* mettre en route le service */
+/* sudo systemctl start mongo.service */

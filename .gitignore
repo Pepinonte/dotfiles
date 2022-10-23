@@ -1,0 +1,13 @@
+# Ignore everything
+/*
+!.gitignore
+!.gitmodules
+
+# Except for the files and folders we want to track
+!.bashrc
+!.zshrc
+!.xprofile
+!.config
+!.local
+!.p10k.zsh
+!.screenlayout

@@ -1,0 +1,8 @@
+[user]
+	email = christian-gros@outlook.fr
+	name = Headhtr
+[core]
+	editor = nvim
+	pager = cat
+[color]
+	ui = auto
