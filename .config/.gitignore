@@ -5,10 +5,10 @@
 
 # Except for the files and folders we want to track
 !alacritty
-!.archlinux-logout
-!.kitty
-!.shell
-!.picom.conf
+!archlinux-logout
+!kitty
+!shell
+!picom.conf
 !nvim
 !rofi
 !qtile
