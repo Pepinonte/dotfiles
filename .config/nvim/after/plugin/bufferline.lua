@@ -7,5 +7,7 @@ end
 
 bufferline.setup({
 options = {
+-- separator_style = { "", "" },
+ separator_style = "slant",
   },
 })

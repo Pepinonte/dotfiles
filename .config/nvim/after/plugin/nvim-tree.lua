@@ -12,6 +12,7 @@ nvim_tree.setup({
 		mappings = {
 			list = {
 				{ key = "u", action = "dir_up" },
+				{ key = ";", action = "vsplit" },
 			},
 		},
 	},
